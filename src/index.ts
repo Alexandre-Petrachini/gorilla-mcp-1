@@ -37,7 +37,7 @@ const GORILLA_DEFAULT_LANGUAGE = process.env.GORILLA_DEFAULT_LANGUAGE ?? "";
 // config endpoint (e.g. staging or self-hosted Supabase project).
 const CONFIG_URL =
   process.env.GORILLA_CONFIG_URL ??
-  "https://gorilla.opusforge.com.br/mcp-config.json";
+  "https://platform.usegorilla.app/mcp-config.json";
 
 interface RuntimeConfig {
   api_base: string;
@@ -243,7 +243,7 @@ function requireKey() {
       content: [
         {
           type: "text" as const,
-          text: "GORILLA_API_KEY is not set. Sign up at https://usegorilla.app, then create a key at gorilla.opusforge.com.br > Menu > API Keys and set GORILLA_API_KEY in your environment.",
+          text: "GORILLA_API_KEY is not set. Sign up at https://usegorilla.app, then create a key at platform.usegorilla.app > Menu > API Keys and set GORILLA_API_KEY in your environment.",
         },
       ],
     };

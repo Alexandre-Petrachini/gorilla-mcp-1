@@ -2,6 +2,11 @@
 
 All notable changes to the Gorilla MCP server are documented here.
 
+## [2.0.1] - 2026-05-10
+
+### Changed
+- Default `CONFIG_URL` now points at `https://platform.usegorilla.app/mcp-config.json`. The legacy `gorilla.opusforge.com.br` host still serves the same payload, so no action is required for existing installs — the next `npm i -g @gorilla/mcp` upgrade will pick up the new default. Docs and the missing-key error message updated to match.
+
 ## [2.0.0] - 2026-04-29
 
 ### Breaking

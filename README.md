@@ -42,7 +42,7 @@ GORILLA_API_KEY=grla_... node dist/index.js
 ### Get your API key
 
 1. Sign up at [usegorilla.app](https://usegorilla.app) and pick a plan ($0.99 single run, $3.99/wk Pro, or $149.99 lifetime).
-2. Sign in at [gorilla.opusforge.com.br](https://gorilla.opusforge.com.br).
+2. Sign in at [platform.usegorilla.app](https://platform.usegorilla.app).
 3. Menu, API Keys, Create.
 4. Copy the key (shown once).
 
@@ -195,7 +195,7 @@ Available at [smithery.ai/server/opusforge/gorilla-mcp](https://smithery.ai/serv
 | `GORILLA_DEFAULT_LANGUAGE` | No | Fallback language for `idea.refine` and `outreach.draft` (`en`, `pt`, `all`). Default: `en`. |
 | `GORILLA_CONFIG_URL` | No | Override the runtime config endpoint. Useful for staging or self-hosted deployments. |
 
-Backend URL and gateway key are fetched automatically from `https://gorilla.opusforge.com.br/mcp-config.json` on startup. No other configuration required.
+Backend URL and gateway key are fetched automatically from `https://platform.usegorilla.app/mcp-config.json` on startup. No other configuration required.
 
 ## Pricing
 

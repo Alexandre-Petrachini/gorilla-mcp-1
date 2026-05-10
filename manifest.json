@@ -175,7 +175,7 @@
     "api_key": {
       "type": "string",
       "title": "Gorilla API Key",
-      "description": "Your API key from gorilla.opusforge.com.br (Menu → API Keys → Create). Starts with grla_. The server starts without it so you can browse tools, but every tool call requires a key.",
+      "description": "Your API key from platform.usegorilla.app (Menu → API Keys → Create). Starts with grla_. The server starts without it so you can browse tools, but every tool call requires a key.",
       "sensitive": true,
       "required": false
     },
