@@ -14,7 +14,7 @@
 [![MCP SDK](https://img.shields.io/badge/MCP_SDK-1.x-7C3AED?logo=anthropic&logoColor=white)](https://modelcontextprotocol.io)
 [![Built for Claude](https://img.shields.io/badge/Built_for-Claude-D97757?logo=anthropic&logoColor=white)](https://claude.ai)
 
-Model Context Protocol server for [Gorilla](https://usegorilla.app). Find your first 100 SaaS users by searching Reddit, YouTube, X, TikTok, and LinkedIn for real demand signals. (LinkedIn search requires a weekly / monthly / lifetime plan; the $0.99 one-run plan covers the other four.)
+Model Context Protocol server for [Gorilla](https://usegorilla.app). Find your first 100 SaaS users by searching Reddit, X, YouTube, TikTok, LinkedIn, and Threads for real demand signals. Every $5 run hits all six platforms.
 
 Learn more: [usegorilla.app](https://usegorilla.app) · [Real run examples](https://usegorilla.app/find-users/) · [How Gorilla compares](https://usegorilla.app/alternatives/) · [Blog](https://usegorilla.app/blog/)
 
@@ -41,7 +41,7 @@ GORILLA_API_KEY=grla_... node dist/index.js
 
 ### Get your API key
 
-1. Sign up at [usegorilla.app](https://usegorilla.app) and pick a plan ($0.99 single run, $3.99/wk Pro, or $149.99 lifetime).
+1. Sign up at [usegorilla.app](https://usegorilla.app). $5 per run, no subscription.
 2. Sign in at [platform.usegorilla.app](https://platform.usegorilla.app).
 3. Menu, API Keys, Create.
 4. Copy the key (shown once).
@@ -88,7 +88,7 @@ Tools are namespaced by domain (`leads.*`, `idea.*`, `runs.*`, `outreach.*`, `ac
 
 ### `leads.find`
 
-Run the full pipeline. Searches Reddit, X, YouTube, TikTok, and LinkedIn and returns scored leads. (LinkedIn is gated to weekly / monthly / lifetime plans; the $0.99 one-run plan covers the other four.) Takes 60-120 seconds. Costs 1 run credit.
+Run the full pipeline. Searches Reddit, X, YouTube, TikTok, LinkedIn, and Threads and returns scored leads. All six platforms hit on every $5 run. Takes 60-120 seconds. Costs 1 run credit.
 
 **Parameters:** `idea` (required) — product description
 
@@ -174,11 +174,11 @@ Build a Week-1 outreach plan from a completed run's HIGH-intent leads, with per-
    → "Who's the target user? Daily commuters or tourists?"
 
 2. leads.find(refined_idea)
-   → 47 leads across Reddit, YouTube, X, TikTok, and LinkedIn (Pro)
+   → 47 leads across Reddit, X, YouTube, TikTok, LinkedIn, and Threads
    → 12 high-intent (people actively searching for this)
 
 3. outreach.plan(run_id)
-   → Week-1 plan: 3/day on Reddit, 4/day on X, 2/day on YT/TT/LinkedIn
+   → Week-1 plan: 3/day on Reddit, 4/day on X, 3/day on Threads, 2/day on YT/TT/LinkedIn
 
 4. outreach.draft(...)  → ready-to-send reply for each high-intent lead
 ```
@@ -199,11 +199,8 @@ Backend URL and gateway key are fetched automatically from `https://platform.use
 
 ## Pricing
 
-- **Single run:** $0.99. Pay per use, no subscription. Covers Reddit, X, YouTube, TikTok.
-- **Weekly Pro:** $3.99/week, 5 runs. Adds LinkedIn.
-- **Monthly Pro:** $14.99/month. Adds LinkedIn.
-- **Lifetime:** $149.99 once, unlimited runs. Adds LinkedIn.
+- **Single run:** $5 flat. Pay per use, no subscription. Hits all six platforms (Reddit, X, YouTube, TikTok, LinkedIn, Threads).
 
 `leads.find`, `leads.search`, `idea.expand`, and `outreach.draft` each cost 1 run credit. `idea.refine`, `runs.get`, `runs.list`, `account.billing`, and `outreach.plan` are free.
 
-See [usegorilla.app](https://usegorilla.app) for current plans and the full product.
+See [usegorilla.app](https://usegorilla.app) for the full product.
